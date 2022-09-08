@@ -19,7 +19,23 @@ class Server {
 
   routes() {
     this.app.get("/api", (req, res) => {
-      res.send("Hello World!")
+      res.json({ ok: true, msg: "Es una petición GET a mi api" })
+    })
+
+    this.app.put("/api", (req, res) => {
+      res.json({ ok: true, msg: "Es una petición PUT a mi api" })
+    })
+
+    this.app.post("/api", (req, res) => {
+      res.json({ ok: true, msg: "Es una petición POST a mi api" })
+    })
+
+    this.app.delete("/api", (req, res) => {
+      res.json({ ok: true, msg: "Es una petición DELETE a mi api" })
+    })
+
+    this.app.patch("/api", (req, res) => {
+      res.json({ ok: true, msg: "Es una petición PATCH a mi api" })
     })
   }
 
