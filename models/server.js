@@ -1,4 +1,5 @@
 import express from "express"
+import cors from "cors"
 
 class Server {
   constructor() {
@@ -13,6 +14,8 @@ class Server {
   }
 
   Middleware() {
+    //CORS
+    this.app.use(cors())
     // Directorio publico
     this.app.use(express.static("public"))
   }
