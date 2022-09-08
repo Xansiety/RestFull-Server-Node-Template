@@ -11,10 +11,10 @@ export const router = Router()
 
 router.get("/", usuauriosGET)
 
-router.put("/", usuariosPUT)
+router.put("/:id", usuariosPUT)
 
 router.post("/", usuariosPOST)
 
-router.delete("/", usuariosDELETE)
+router.delete("/:id", usuariosDELETE)
 
 router.patch("/", usuariosPATCH)
