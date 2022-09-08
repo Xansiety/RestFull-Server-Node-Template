@@ -5,9 +5,17 @@ const usuauriosGET = (req, res = response) => {
 }
 
 const usuariosPOST = (req, res = response) => {
+  //   const body = req.body
+  const { nombre, edad } = req.body
+
   res
     .status(201)
-    .json({ ok: true, msg: "Es una petición POST desde Controlador" })
+    .json({
+      ok: true,
+      msg: "Es una petición POST desde Controlador",
+      nombre,
+      edad,
+    })
 }
 
 const usuariosPUT = (req, res = response) => {
