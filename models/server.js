@@ -23,11 +23,11 @@ class Server {
     })
 
     this.app.put("/api", (req, res) => {
-      res.json({ ok: true, msg: "Es una petición PUT a mi api" })
+      res.status(500).json({ ok: true, msg: "Es una petición PUT a mi api" })
     })
 
     this.app.post("/api", (req, res) => {
-      res.json({ ok: true, msg: "Es una petición POST a mi api" })
+      res.status(201).json({ ok: true, msg: "Es una petición POST a mi api" })
     })
 
     this.app.delete("/api", (req, res) => {
